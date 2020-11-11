@@ -33,14 +33,14 @@ config.middleware = ['api'];
     origin:'*',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   };
-  // config.sequelize = {
-  //   dialect: 'mysql',
-  //   host: '127.0.0.1',
-  //   username: "root",
-  //   password: "d50578540ce69af3",
-  //   port: 3306,
-  //   database: 'libiqiang',
-  // };
+  config.sequelize = {
+     dialect: 'mysql',
+     host: '127.0.0.1',
+     username: "libiqiang",
+     password: "qq7758258",
+     port: 3306,
+     database: 'libiqiang',
+  };
   return {
     ...config,
     ...userConfig,

@@ -1,7 +1,10 @@
 module.exports = options => {
     return async function api(ctx, next) {
         //添加model
-        ctx.request.body.model = ctx.originalUrl.split('/')[1];
+        
+        let model = ctx.originalUrl.split('/')[2];
+        model = model.charAt(0).toUpperCase() + model.slice(1);
+        ctx.request.body.model = model;
         await next()
     };
   };

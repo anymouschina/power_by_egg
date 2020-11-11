@@ -1,8 +1,8 @@
 //教练员模型
 module.exports = (app) => {
     const { STRING, INTEGER,DATE,NOW,VIRTUAL,DOUBLE  } = app.Sequelize;
-    const community = app.model.define(
-      "community",
+    const Community = app.model.define(
+      "Community",
       {
         id: {
           type: INTEGER,
@@ -22,5 +22,5 @@ module.exports = (app) => {
         tableName: "community_list"
       }
     );
-    return community;
+    return Community;
   };

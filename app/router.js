@@ -19,7 +19,7 @@ module.exports = app => {
     for(const way in controller[sub]){
       if(way.indexOf('_') < 0)throw error(`the controller about ${way} in ${sub} need rename!`)
       let [name,method] = way.split('_')
-      router[method](`/${sub}/${name}`, controller[sub][way]);
+      router[method](`/community/${sub}/${name}`, controller[sub][way]);
       // console.log(`/${sub}/${name}`)
     }
   }
